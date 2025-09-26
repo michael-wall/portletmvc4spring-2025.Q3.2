@@ -75,12 +75,6 @@ dependencies {
     implementation (group: "org.springframework.security", name: "spring-security-web") {
         version { strictly springSecurityVersion }
     }
-	
-	implementation 'com.liferay.plutonium:portlet-servlet-adapter:4.0.0-M1'
-	
-//    implementation('com.liferay.plutonium:portlet-servlet-adapter:4.0.0-M1') {
-//        exclude group: 'com.liferay.plutonium', module: 'portlet-servlet-adapter', version: '3.1.0'
-//   }
 
     compileOnly group: "com.liferay.portal", name: "com.liferay.portal.kernel"
     compileOnly group: "com.liferay.jakarta.portlet", name: "com.liferay.jakarta.portlet-api", version: "4.0.0"
