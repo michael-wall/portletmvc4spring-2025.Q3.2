@@ -22,6 +22,7 @@ blade create -t spring-mvc-portlet --framework portletmvc4spring --view-type jsp
 xmlns:fn="http://java.sun.com/jsp/jstl/functions"
 xmlns:fn="jakarta.tags.functions"
 fn:escapeXml
+fn:
 ```
 - Update build.gradle file:
   - Change the springVersion and springSecurityVersion versions to be:
