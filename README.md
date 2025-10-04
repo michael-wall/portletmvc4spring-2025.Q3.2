@@ -38,6 +38,16 @@ with:
 ```
 implementation(group: "org.hibernate.validator", name: "hibernate-validator", version: "8.0.2.Final") {
 ```
+  - Update com.liferay.portletmvc4spring versions by replacing:
+```
+implementation group: "com.liferay.portletmvc4spring", name: "com.liferay.portletmvc4spring.framework", version: "5.3.2"
+implementation group: "com.liferay.portletmvc4spring", name: "com.liferay.portletmvc4spring.security", version: "5.3.2"
+```
+with:
+```
+implementation group: "com.liferay.portletmvc4spring", name: "com.liferay.portletmvc4spring.framework", version: "6.0.0-M1"
+implementation group: "com.liferay.portletmvc4spring", name: "com.liferay.portletmvc4spring.security", version: "6.0.0-M1"
+```
   - Some of the Jakarta gradle dependencies are not yet available in Maven Central, meaning the following must be temporarily included:
     - Update buildscript > repositories section to include the following:
 ```
