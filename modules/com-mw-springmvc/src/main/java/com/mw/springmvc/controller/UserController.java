@@ -1,22 +1,17 @@
 package com.mw.springmvc.controller;
 
-import com.mw.springmvc.dto.User;
-
+import com.liferay.portletmvc4spring.ModelAndView;
 import com.liferay.portletmvc4spring.bind.annotation.ActionMapping;
 import com.liferay.portletmvc4spring.bind.annotation.RenderMapping;
+import com.mw.springmvc.dto.User;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
-
 import java.util.Calendar;
 import java.util.Locale;
 
-import jakarta.portlet.ActionResponse;
-import jakarta.portlet.MutableRenderParameters;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.MessageSource;
 import org.springframework.stereotype.Controller;
@@ -27,6 +22,9 @@ import org.springframework.validation.beanvalidation.LocalValidatorFactoryBean;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.support.SessionStatus;
+
+import jakarta.portlet.ActionResponse;
+import jakarta.portlet.MutableRenderParameters;
 
 /**
  * @author Michael Wall
@@ -41,8 +39,11 @@ public class UserController {
 	}
 
 	@RenderMapping
-	public String prepareView() {
-		return "user";
+	public ModelAndView prepareView() {
+		_logger.info("MW using ModelAndView");
+		
+		
+		return new ModelAndView("user");
 	}
 
 	@RenderMapping(params = "jakarta.portlet.action=success")

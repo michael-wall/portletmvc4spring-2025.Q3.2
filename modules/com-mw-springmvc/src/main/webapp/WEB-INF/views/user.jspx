@@ -10,7 +10,7 @@
 	<form:form id="${namespace}mainForm" action="${mainFormActionURL}" class="user-form" method="post" modelAttribute="user">
 		<form:errors cssClass="portlet-msg-error" />
 		<p class="caption">
-			<spring:message code="personal-information" />
+			<spring:message code="personal-information" /> MW USING ModelAndView
 		</p>
 		<fieldset>
 			<div class="form-group">
